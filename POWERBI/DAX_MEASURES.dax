@@ -1,0 +1,37 @@
+// Core measures for all seven Nifty 100 dashboards
+
+Total Revenue = SUM(fact_profit_loss[sales])
+Total Net Profit = SUM(fact_profit_loss[net_profit])
+Average OPM % = AVERAGE(fact_profit_loss[opm_pct])
+Average Debt To Equity = AVERAGE(fact_balance_sheet[debt_to_equity])
+Average Health Score = AVERAGE(fact_ml_scores[overall_score])
+ROE Last Year = AVERAGE(dim_company[roe_pct])
+ROCE = AVERAGE(dim_company[roce_pct])
+Free Cash Flow = SUM(fact_cash_flow[free_cash_flow])
+Cash Conversion Ratio = AVERAGE(fact_cash_flow[cash_conversion_ratio])
+Interest Coverage = AVERAGE(fact_profit_loss[interest_coverage])
+Net Profit Margin % = AVERAGE(fact_profit_loss[net_profit_margin_pct])
+Expense Ratio % = AVERAGE(fact_profit_loss[expense_ratio_pct])
+Asset Turnover = AVERAGE(fact_profit_loss[asset_turnover])
+Return On Assets % = AVERAGE(fact_profit_loss[return_on_assets])
+
+Total Companies = DISTINCTCOUNT(dim_company[symbol])
+
+Excellent Companies =
+COUNTROWS(FILTER(fact_ml_scores, fact_ml_scores[overall_score] >= 85))
+
+Weak Or Poor Companies =
+COUNTROWS(FILTER(fact_ml_scores, fact_ml_scores[overall_score] < 50))
+
+3Y Sales CAGR =
+CALCULATE(
+    MAX(fact_analysis[compounded_sales_growth_pct]),
+    fact_analysis[period_label] = "3Y"
+)
+
+YoY Sales Growth % =
+VAR CurrentSales = [Total Revenue]
+VAR CurrentYear = MAX(dim_year[fiscal_year])
+VAR PreviousSales =
+    CALCULATE([Total Revenue], FILTER(ALL(dim_year), dim_year[fiscal_year] = CurrentYear - 1))
+RETURN DIVIDE(CurrentSales - PreviousSales, PreviousSales) * 100

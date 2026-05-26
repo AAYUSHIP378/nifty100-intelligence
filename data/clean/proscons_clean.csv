@@ -1,0 +1,27 @@
+symbol,text,is_pro,category,source,confidence,generated_at
+HDFCBANK,Company is expected to give good quarter,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,Company has delivered good profit growth of 23.4% CAGR over last 5 years,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,Company has been maintaining a healthy dividend payout of 22.9%,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,Company's median sales growth is 16.4% of last 10 years,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Company is almost debt free.,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Company is expected to give good quarter,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+INFY,Company has a good return on equity (ROE) track record: 3 Years ROE 30.9%,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+INFY,Company has been maintaining a healthy dividend payout of 63.3%,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+TCS,Company is almost debt free.,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+TCS,Company has a good return on equity (ROE) track record: 3 Years ROE 47.4%,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+TCS,Company has been maintaining a healthy dividend payout of 66.2%,True,Strength,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,Stock is trading at 2.76 times its book value,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,Company has low interest coverage ratio.,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,"Contingent liabilities of Rs.24,09,821 Cr.",False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+HDFCBANK,"Earnings include an other income of Rs.1,55,870 Cr.",False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Stock is trading at 9.11 times its book value,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Tax rate seems low,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Company has a low return on equity of 12.9% over last 3 years.,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,"Earnings include an other income of Rs.1,657 Cr.",False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+SBILIFE,Dividend payout has been low at 14.0% of profits over last 3 years,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+INFY,Stock is trading at 9.03 times its book value,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+INFY,Promoter holding is low: 14.4%,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+WIPRO,The company has delivered a poor sales growth of 8.75% over past five years.,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+WIPRO,Dividend payout has been low at 12.2% of profits over last 3 years,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+TCS,Stock is trading at 15.2 times its book value,False,Risk,MANUAL,1.0,2026-05-26 03:35:06
+TCS,The company has delivered a poor sales growth of 10.5% over past five years.,False,Risk,MANUAL,1.0,2026-05-26 03:35:06

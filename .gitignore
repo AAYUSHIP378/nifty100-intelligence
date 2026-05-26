@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+.env
+staticfiles/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+*.pbix
+agent-tools/

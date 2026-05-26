@@ -1,0 +1,70 @@
+{% extends "web/base.html" %}
+{% block title %}{{ company.company_name }} | Nifty 100{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>{{ company.company_name }} ({{ company.symbol }})</h1>
+  <p>{{ company.sector }} · {{ company.sub_sector }}</p>
+  {% if score %}
+  <p class="health-pill">{{ score.health_label }} · Score {{ score.overall_score }}</p>
+  {% endif %}
+</section>
+
+<section class="charts-grid">
+  <article class="panel">
+    <h2>Revenue vs Net Profit</h2>
+    <canvas id="plChart"></canvas>
+  </article>
+  <article class="panel">
+    <h2>OPM % Trend</h2>
+    <canvas id="opmChart"></canvas>
+  </article>
+</section>
+
+<section class="two-col">
+  <article class="panel">
+    <h2>Pros</h2>
+    <ul>
+      {% for row in pros %}
+      <li><strong>{{ row.category }}</strong> — {{ row.text }}</li>
+      {% empty %}
+      <li>No pros recorded.</li>
+      {% endfor %}
+    </ul>
+  </article>
+  <article class="panel">
+    <h2>Cons</h2>
+    <ul>
+      {% for row in cons %}
+      <li><strong>{{ row.category }}</strong> — {{ row.text }}</li>
+      {% empty %}
+      <li>No cons recorded.</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<script>
+  const years = {{ years|safe }};
+  const sales = {{ sales|safe }};
+  const netProfit = {{ net_profit|safe }};
+  const opm = {{ opm|safe }};
+
+  new Chart(document.getElementById("plChart"), {
+    type: "bar",
+    data: {
+      labels: years,
+      datasets: [
+        { label: "Sales", data: sales, backgroundColor: "#2563eb" },
+        { type: "line", label: "Net Profit", data: netProfit, borderColor: "#16a34a", backgroundColor: "#16a34a" }
+      ]
+    },
+    options: { responsive: true }
+  });
+
+  new Chart(document.getElementById("opmChart"), {
+    type: "line",
+    data: { labels: years, datasets: [{ label: "OPM %", data: opm, borderColor: "#f59e0b", fill: false }] },
+    options: { responsive: true }
+  });
+</script>
+{% endblock %}

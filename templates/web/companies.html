@@ -1,0 +1,33 @@
+{% extends "web/base.html" %}
+{% block title %}Companies | Nifty 100{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Company Directory</h1>
+  <p>Browse all Nifty 100 companies with latest ML health scores.</p>
+</section>
+
+<section class="panel">
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Company</th>
+        <th>Sector</th>
+        <th>Health Score</th>
+        <th>Label</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in companies %}
+      <tr>
+        <td><a href="/companies/{{ row.symbol }}/">{{ row.symbol }}</a></td>
+        <td>{{ row.company_name }}</td>
+        <td>{{ row.sector }}</td>
+        <td>{{ row.overall_score }}</td>
+        <td>{{ row.health_label }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

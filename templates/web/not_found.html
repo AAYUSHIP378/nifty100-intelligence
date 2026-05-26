@@ -1,0 +1,9 @@
+{% extends "web/base.html" %}
+{% block title %}Not Found{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Company not found</h1>
+  <p>No record for symbol <strong>{{ symbol }}</strong>.</p>
+  <p><a href="/companies/">Back to directory</a></p>
+</section>
+{% endblock %}

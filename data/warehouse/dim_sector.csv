@@ -1,0 +1,14 @@
+sector_id,sector_name,sector_code,description
+1,Auto,AUTO,Nifty 100 Auto companies
+2,Banking,BANKING,Nifty 100 Banking companies
+3,Cement,CEMENT,Nifty 100 Cement companies
+4,Consumer Goods,CONSUMERGOOD,Nifty 100 Consumer Goods companies
+5,Energy,ENERGY,Nifty 100 Energy companies
+6,Healthcare,HEALTHCARE,Nifty 100 Healthcare companies
+7,Holding Company,HOLDINGCOMPA,Nifty 100 Holding Company companies
+8,IT,IT,Nifty 100 IT companies
+9,Insurance,INSURANCE,Nifty 100 Insurance companies
+10,NBFC,NBFC,Nifty 100 NBFC companies
+11,Paint,PAINT,Nifty 100 Paint companies
+12,Ports,PORTS,Nifty 100 Ports companies
+13,Power,POWER,Nifty 100 Power companies

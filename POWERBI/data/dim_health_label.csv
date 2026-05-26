@@ -1,0 +1,6 @@
+label_id,label_name,min_score,max_score,color_hex
+1,EXCELLENT,85,100.0,#17803A
+2,GOOD,70,84.99,#6BBF59
+3,AVERAGE,50,69.99,#F4C542
+4,WEAK,35,49.99,#F97316
+5,POOR,0,34.99,#DC2626

@@ -1,0 +1,62 @@
+[
+  {
+    "from": "fact_profit_loss",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "fact_profit_loss",
+    "fromColumn": "year_id",
+    "to": "dim_year",
+    "toColumn": "year_id"
+  },
+  {
+    "from": "fact_balance_sheet",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "fact_balance_sheet",
+    "fromColumn": "year_id",
+    "to": "dim_year",
+    "toColumn": "year_id"
+  },
+  {
+    "from": "fact_cash_flow",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "fact_cash_flow",
+    "fromColumn": "year_id",
+    "to": "dim_year",
+    "toColumn": "year_id"
+  },
+  {
+    "from": "fact_analysis",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "fact_ml_scores",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "fact_pros_cons",
+    "fromColumn": "symbol",
+    "to": "dim_company",
+    "toColumn": "symbol"
+  },
+  {
+    "from": "dim_company",
+    "fromColumn": "sector",
+    "to": "dim_sector",
+    "toColumn": "sector_name"
+  }
+]

@@ -1,0 +1,75 @@
+{% extends "web/base.html" %}
+{% block title %}Executive Overview | Nifty 100{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Executive Market Overview</h1>
+  <p>Production snapshot across {{ total_companies }} Nifty 100 companies.</p>
+</section>
+
+<section class="cards">
+  <article class="card"><h3>Companies</h3><p>{{ total_companies }}</p></article>
+  <article class="card"><h3>Avg Health Score</h3><p>{{ average_score }}</p></article>
+  <article class="card"><h3>Excellent Health</h3><p>{{ excellent_count }}</p></article>
+  <article class="card"><h3>Weak / Poor</h3><p>{{ weak_count }}</p></article>
+</section>
+
+<section class="charts-grid">
+  <article class="panel">
+    <h2>Sector Distribution</h2>
+    <canvas id="sectorChart"></canvas>
+  </article>
+  <article class="panel">
+    <h2>Revenue vs Net Profit Trend</h2>
+    <canvas id="trendChart"></canvas>
+  </article>
+</section>
+
+<section class="panel">
+  <h2>Top 10 Companies by Health Score</h2>
+  <table>
+    <thead>
+      <tr><th>Rank</th><th>Company</th><th>Sector</th><th>Score</th><th>Label</th></tr>
+    </thead>
+    <tbody>
+      {% for row in top_companies %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td><a href="/companies/{{ row.symbol }}/">{{ row.company_name }}</a></td>
+        <td>{{ row.sector }}</td>
+        <td>{{ row.overall_score }}</td>
+        <td>{{ row.health_label }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<script>
+  const sectorLabels = {{ sector_labels|safe }};
+  const sectorCounts = {{ sector_counts|safe }};
+  const revenueLabels = {{ revenue_labels|safe }};
+  const revenueValues = {{ revenue_values|safe }};
+  const profitValues = {{ profit_values|safe }};
+
+  new Chart(document.getElementById("sectorChart"), {
+    type: "doughnut",
+    data: {
+      labels: sectorLabels,
+      datasets: [{ data: sectorCounts, backgroundColor: ["#2563eb", "#16a34a", "#f59e0b", "#dc2626", "#7c3aed", "#0891b2", "#db2777", "#4b5563"] }]
+    },
+    options: { responsive: true, plugins: { legend: { position: "bottom" } } }
+  });
+
+  new Chart(document.getElementById("trendChart"), {
+    type: "line",
+    data: {
+      labels: revenueLabels,
+      datasets: [
+        { label: "Revenue", data: revenueValues, borderColor: "#2563eb", backgroundColor: "rgba(37,99,235,0.15)", fill: true },
+        { label: "Net Profit", data: profitValues, borderColor: "#16a34a", backgroundColor: "rgba(22,163,74,0.15)", fill: true }
+      ]
+    },
+    options: { responsive: true, scales: { y: { ticks: { callback: value => value.toLocaleString("en-IN") } } } }
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,101 @@
+symbol,company_name,sector,sub_sector
+ABB,Abbott India Ltd,Healthcare,Pharmaceuticals
+ADANIENSOL,Adani Energy Solutions Ltd,Energy,Power Transmission
+ADANIENT,Adani Enterprises Ltd,Holding Company,Diversified
+ADANIGREEN,Adani Green Energy Ltd,Power,Renewable Power
+ADANIPORTS,Adani Ports & Special Economic Zone Ltd,Ports,Ports and Logistics
+ADANIPOWER,Adani Power Ltd,Power,Thermal Power
+AMBUJACEM,Ambuja Cements Ltd,Cement,Cement
+APOLLOHOSP,Apollo Hospitals Chain of Indian private hospitals,Healthcare,Hospitals
+ASIANPAINT,Asian Paints Indian Multi-National Paint and Coating Manufacturing Company,Paint,Paints
+ATGL,Adani Total Gas Ltd,Energy,Gas Distribution
+AXISBANK,Axis Bank Ltd,Banking,Private Bank
+BAJAJ-AUTO,Bajaj Auto Ltd,Auto,Two Wheelers
+BAJAJFINSV,Bajaj Finserv Ltd,NBFC,Financial Services
+BAJAJHLDNG,Bajaj Holdings & Investment Ltd,Holding Company,Investment Holding
+BAJFINANCE,Bajaj Finance Ltd,NBFC,Consumer Finance
+BANKBARODA,Bank of Baroda,Banking,Public Bank
+BEL,Bharat Electronics Ltd,Holding Company,Defence Electronics
+BHARTIARTL,Bharti Airtel Ltd,Consumer Goods,Telecom
+BHEL,Bharat Heavy Electricals Limited,Power,Power Equipment
+BOSCHLTD,Bosch Ltd,Auto,Auto Components
+BPCL,Bharat Petroleum Corporation Ltd,Energy,Oil Marketing
+BRITANNIA,Britannia Industries Ltd,Consumer Goods,FMCG
+CANBK,Canara Bank,Banking,Public Bank
+CHOLAFIN,Cholamandalam Investment & Finance Company Ltd,NBFC,Vehicle Finance
+CIPLA,Cipla Ltd,Healthcare,Pharmaceuticals
+COALINDIA,Coal India Ltd,Energy,Coal
+DABUR,Dabur India Ltd,Consumer Goods,FMCG
+DIVISLAB,Divis Laboratories Ltd,Healthcare,Pharmaceuticals
+DLF,DLF Ltd,Holding Company,Real Estate
+DMART,Avenue Supermarts Ltd,Consumer Goods,Retail
+DRREDDY,Dr Reddys Laboratories Ltd,Healthcare,Pharmaceuticals
+EICHERMOT,Eicher Motors Ltd,Auto,Two Wheelers
+GAIL,GAIL (India) Ltd,Energy,Gas Utility
+GODREJCP,Godrej Consumer Products Ltd,Consumer Goods,FMCG
+GRASIM,Grasim Industries Ltd,Cement,Diversified Materials
+HAL,Hindustan Aeronautics Ltd,Holding Company,Defence Aerospace
+HAVELLS,Havells India Ltd,Consumer Goods,Electricals
+HCLTECH,HCL Technologies Ltd,IT,IT Services
+HDFCBANK,HDFC Bank Ltd,Banking,Private Bank
+HDFCLIFE,HDFC Life Insurance Company Ltd,Insurance,Life Insurance
+HEROMOTOCO,Hero MotoCorp Ltd,Auto,Two Wheelers
+HINDALCO,Hindalco Industries Ltd,Holding Company,Metals
+HINDUNILVR,Hindustan Unilever Ltd,Consumer Goods,FMCG
+ICICIBANK,ICICI Bank Ltd,Banking,Private Bank
+ICICIGI,ICICI Lombard General Insurance Company Ltd,Insurance,General Insurance
+ICICIPRULI,ICICI Prudential Life Insurance Company Ltd,Insurance,Life Insurance
+INDIGO,Interglobe Aviation Ltd,Consumer Goods,Aviation
+INDUSINDBK,IndusInd Bank Ltd,Banking,Private Bank
+INFY,Infosys Ltd,IT,IT Services
+IOC,Indian Oil Corporation,Energy,Oil Marketing
+IRCTC,Indian Railway Catering & Tourism Corporation Ltd,Consumer Goods,Travel Services
+IRFC,Indian Railway Finance Corporation Ltd,NBFC,Infrastructure Finance
+ITC,ITC Ltd,Consumer Goods,FMCG
+JINDALSTEL,Jindal Steel & Power Ltd,Holding Company,Metals
+JIOFIN,Jio Financial Services Ltd,NBFC,Financial Services
+JSWENERGY,JSW Energy Ltd,Power,Power Generation
+JSWSTEEL,JSW Steel Ltd,Holding Company,Metals
+KOTAKBANK,Kotak Mahindra Bank Ltd,Banking,Private Bank
+LICI,Life Insurance Corporation of India,Insurance,Life Insurance
+LODHA,Macrotech Developers Ltd,Holding Company,Real Estate
+LT,Larsen & Toubro Ltd,Holding Company,Engineering and Construction
+LTIM,LTIMindtree Ltd,IT,IT Services
+M&M,Mahindra & Mahindra Ltd,Auto,Passenger and Commercial Vehicles
+MARUTI,Maruti Suzuki India Ltd,Auto,Passenger Vehicles
+MOTHERSON,Samvardhana Motherson International Ltd,Auto,Auto Components
+NAUKRI,Info Edge (India) Ltd,IT,Internet Services
+NESTLEIND,Nestle India Ltd,Consumer Goods,FMCG
+NHPC,NHPC Ltd,Power,Hydro Power
+NTPC,NTPC Ltd,Power,Power Generation
+ONGC,Oil & Natural Gas Corpn Ltd,Energy,Oil and Gas Exploration
+PFC,Power Finance Corporation Ltd,NBFC,Power Finance
+PIDILITIND,Pidilite Industries Ltd,Consumer Goods,Specialty Chemicals
+PNB,Punjab National Bank,Banking,Public Bank
+POWERGRID,Power Grid Corporation of India Ltd,Power,Power Transmission
+RECLTD,REC Ltd,NBFC,Power Finance
+RELIANCE,Reliance Industries Ltd,Energy,Diversified Energy
+SBILIFE,SBI Life Insurance Company Ltd,Insurance,Life Insurance
+SBIN,State Bank of India,Banking,Public Bank
+SHREECEM,Shree Cement Ltd,Cement,Cement
+SHRIRAMFIN,Shriram Finance Ltd,NBFC,Vehicle Finance
+SIEMENS,Siemens Ltd,Power,Industrial Automation
+SUNPHARMA,Sun Pharmaceuticals Industries Ltd,Healthcare,Pharmaceuticals
+TATACONSUM,Tata Consumer Products Ltd,Consumer Goods,FMCG
+TATAMOTORS,Tata Motors Ltd,Auto,Passenger and Commercial Vehicles
+TATAPOWER,Tata Power Company Ltd,Power,Power Utility
+TATASTEEL,Tata Steel Ltd,Holding Company,Metals
+TCS,Tata Consultancy Services Ltd,IT,IT Services
+TECHM,Tech Mahindra Ltd,IT,IT Services
+TITAN,Titan Company Ltd,Consumer Goods,Jewellery and Retail
+TORNTPHARM,Torrent Pharmaceuticals Ltd,Healthcare,Pharmaceuticals
+TRENT,Trent Ltd,Consumer Goods,Retail
+TVSMOTOR,TVS Motor Company Ltd,Auto,Two Wheelers
+ULTRACEMCO,ULTRACEMCO,Cement,Cement
+UNIONBANK,UNIONBANK,Banking,Public Bank
+UNITDSPR,UNITDSPR,Consumer Goods,Alcoholic Beverages
+VBL,VBL,Consumer Goods,Beverages
+VEDL,VEDL,Holding Company,Metals
+WIPRO,WIPRO,IT,IT Services
+ZOMATO,ZOMATO,Consumer Goods,Internet Food Services
+ZYDUSLIFE,ZYDUSLIFE,Healthcare,Pharmaceuticals

@@ -44,6 +44,11 @@ export default function Sidebar() {
     {
       name: "Risk Dashboard",
       path: "/risk"
+    },
+
+    {
+      name: "Power BI Dashboards",
+      path: "/powerbi"
     }
 
   ];

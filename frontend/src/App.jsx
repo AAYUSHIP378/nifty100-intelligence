@@ -24,6 +24,7 @@ import GrowthAnalytics from "./pages/GrowthAnalytics.jsx";
 import DebtMonitor from "./pages/DebtMonitor.jsx";
 import DividendAnalytics from "./pages/DividendAnalytics.jsx";
 import RiskDashboard from "./pages/RiskDashboard.jsx";
+import PowerBIDashboards from "./pages/PowerBIDashboards.jsx";
 
 import Admin from "./components/Admin.jsx";
 
@@ -125,6 +126,13 @@ function App() {
           <Route
             path="/risk"
             element={<RiskDashboard />}
+          />
+
+          {/* ================= POWER BI DASHBOARDS ================= */}
+
+          <Route
+            path="/powerbi"
+            element={<PowerBIDashboards />}
           />
 
         </Route>

@@ -253,6 +253,12 @@ function CompanyDeepDive() {
 
             </h1>
 
+            <p className="text-xl font-semibold text-white mb-2">
+
+              {selectedCompany.company_name || "Company name unavailable"}
+
+            </p>
+
             <p className="text-slate-400 text-lg">
 
               Detailed AI powered financial intelligence report
@@ -622,11 +628,21 @@ function CompanyDeepDive() {
 
               <div className="flex justify-between items-center mb-6">
 
-                <h2 className="text-3xl font-bold text-cyan-400">
+                <div>
 
-                  {item.symbol}
+                  <h2 className="text-3xl font-bold text-cyan-400">
 
-                </h2>
+                    {item.symbol}
+
+                  </h2>
+
+                  <p className="text-slate-400 mt-1">
+
+                    {item.company_name || "No company name"}
+
+                  </p>
+
+                </div>
 
                 <span
                   className={`px-4 py-2 rounded-full text-sm font-bold ${getHealthClass(item.health_label)}`}

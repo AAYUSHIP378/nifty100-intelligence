@@ -4,6 +4,23 @@ from rest_framework.response import Response
 from .warehouse import filter_rows, latest_ml_scores, query_table
 
 
+def _enrich_score_rows(rows):
+    companies = {row["symbol"]: row for row in query_table("dim_company")}
+    enriched = []
+    for row in rows:
+        symbol = row.get("symbol")
+        company = companies.get(symbol, {})
+        enriched.append(
+            {
+                **row,
+                "company_name": company.get("company_name") or symbol,
+                "sector": company.get("sector") or "Sector unavailable",
+                "sub_sector": company.get("sub_sector"),
+            }
+        )
+    return enriched
+
+
 @api_view(["GET"])
 def dashboard_summary(request):
     scores = latest_ml_scores()
@@ -19,7 +36,7 @@ def dashboard_summary(request):
             "average_score": average_score,
             "high_risk": len([row for row in scores if float(row.get("overall_score") or 0) < 50]),
             "excellent_count": len([row for row in scores if float(row.get("overall_score") or 0) >= 85]),
-            "top_companies": sorted(scores, key=lambda row: row.get("overall_score") or 0, reverse=True)[:10],
+            "top_companies": sorted(_enrich_score_rows(scores), key=lambda row: row.get("overall_score") or 0, reverse=True)[:10],
             "health_distribution": distribution,
         }
     )
@@ -101,7 +118,7 @@ def financials(request, symbol):
 def ml_scores(request):
     sector = request.GET.get("sector")
     label = request.GET.get("label")
-    rows = latest_ml_scores()
+    rows = _enrich_score_rows(latest_ml_scores())
     if sector:
         rows = [row for row in rows if row.get("sector") == sector]
     if label:
@@ -111,13 +128,13 @@ def ml_scores(request):
 
 @api_view(["GET"])
 def risk_scores(request):
-    rows = [row for row in latest_ml_scores() if float(row.get("overall_score") or 0) < 50]
+    rows = _enrich_score_rows([row for row in latest_ml_scores() if float(row.get("overall_score") or 0) < 50])
     return Response(sorted(rows, key=lambda row: row.get("overall_score") or 0))
 
 
 @api_view(["GET"])
 def top_10_companies(request):
-    rows = latest_ml_scores()
+    rows = _enrich_score_rows(latest_ml_scores())
     return Response(sorted(rows, key=lambda row: row.get("overall_score") or 0, reverse=True)[:10])
 
 

@@ -8,5 +8,5 @@ staticfiles/
 frontend/node_modules/
 frontend/dist/
 .DS_Store
-*.pbix
+.pbix
 agent-tools/

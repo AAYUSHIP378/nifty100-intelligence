@@ -19,8 +19,22 @@ def home(request):
         revenue_by_year[year] = revenue_by_year.get(year, 0) + float(row.get("sales") or 0)
         profit_by_year[year] = profit_by_year.get(year, 0) + float(row.get("net_profit") or 0)
     years = sorted(revenue_by_year.keys())[-8:]
+    companies = {row["symbol"]: row for row in query_table("dim_company")}
+    top_companies = sorted(
+        [
+            {
+                **row,
+                "company_name": companies.get(row.get("symbol"), {}).get("company_name") or row.get("symbol"),
+                "sector": companies.get(row.get("symbol"), {}).get("sector") or "Sector unavailable",
+                "sub_sector": companies.get(row.get("symbol"), {}).get("sub_sector"),
+            }
+            for row in scores
+        ],
+        key=lambda row: row.get("overall_score") or 0,
+        reverse=True,
+    )[:10]
     context = {
-        "total_companies": len(query_table("dim_company")),
+        "total_companies": len(companies),
         "average_score": round(sum(float(row.get("overall_score") or 0) for row in scores) / len(scores), 2) if scores else 0,
         "excellent_count": len([row for row in scores if float(row.get("overall_score") or 0) >= 85]),
         "weak_count": len([row for row in scores if float(row.get("overall_score") or 0) < 50]),
@@ -34,7 +48,7 @@ def home(request):
         "revenue_labels": json.dumps([str(year) for year in years]),
         "revenue_values": json.dumps([round(revenue_by_year[year], 2) for year in years]),
         "profit_values": json.dumps([round(profit_by_year.get(year, 0), 2) for year in years]),
-        "top_companies": sorted(scores, key=lambda row: row.get("overall_score") or 0, reverse=True)[:10],
+        "top_companies": top_companies,
     }
     return render(request, "web/home.html", context)
 

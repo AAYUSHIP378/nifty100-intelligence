@@ -34,8 +34,8 @@
       {% for row in top_companies %}
       <tr>
         <td>{{ forloop.counter }}</td>
-        <td><a href="/companies/{{ row.symbol }}/">{{ row.company_name }}</a></td>
-        <td>{{ row.sector }}</td>
+        <td><a href="/companies/{{ row.symbol }}/">{{ row.company_name|default:row.symbol }}</a></td>
+        <td>{{ row.sector|default:"Sector unavailable" }}</td>
         <td>{{ row.overall_score }}</td>
         <td>{{ row.health_label }}</td>
       </tr>

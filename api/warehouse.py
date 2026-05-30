@@ -102,11 +102,13 @@ def latest_ml_scores() -> list[dict[str, Any]]:
     df["computed_at"] = pd.to_datetime(df["computed_at"], errors="coerce")
     df = df.sort_values(["symbol", "computed_at"]).drop_duplicates("symbol", keep="last")
     companies = {row["symbol"]: row for row in query_table("dim_company")}
-    for record in df.to_dict(orient="records"):
+    records = df.to_dict(orient="records")
+    for record in records:
         company = companies.get(record["symbol"], {})
         record["company_name"] = company.get("company_name")
         record["sector"] = company.get("sector")
-    return df.to_dict(orient="records")
+        record["sub_sector"] = company.get("sub_sector")
+    return records
 
 
 def filter_rows(rows: list[dict[str, Any]], **filters: Any) -> list[dict[str, Any]]:
